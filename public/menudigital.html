@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Taurus Code - Menú Digital</title>
+</head>
+<body>
+    <main>
+        <h2>[Nombre de el Local]</h2>
+
+        <!-- Hero carrusel -->
+        <section class="carousel">
+            <div class="carousel__container">
+
+                <div class="carousel__slide">
+                    <img src="../img/hero-menudigital/black_and_white_pencil_drawing (1).jpeg" alt="Tercera imagen">
+                </div>
+
+                <div class="carousel__slide">
+                    <img src="../img/hero-menudigital/A_casual_real-life_photograph_ (1).jpeg" alt="Primera imagen">
+                </div>
+
+                <div class="carousel__slide">
+                    <img src="../img/hero-menudigital/A_casual_real-life_photograph_.jpeg" alt="Segunda imagen">
+                </div>
+
+            </div>
+
+            <button class="carousel__btn carousel__btn--prev"
+                    type="button"
+                    aria-label="Imagen anterior">
+                &#10094;
+            </button>
+
+            <button class="carousel__btn carousel__btn--next"
+                    type="button"
+                    aria-label="Imagen siguiente">
+                &#10095;
+            </button>
+
+            <div class="carousel__indicators">
+                <button class="carousel__indicator active"
+                        type="button"
+                        aria-label="Ir a la imagen 1"></button>
+
+                <button class="carousel__indicator"
+                        type="button"
+                        aria-label="Ir a la imagen 2"></button>
+
+                <button class="carousel__indicator"
+                        type="button"
+                        aria-label="Ir a la imagen 3"></button>
+            </div>
+        </section>
+
+        <h2>Menú</h2>
+        <section class="catalogo_menu_digital">
+            <h3 class="categoria_titulos">Entradas</h3>
+                <!-- Inicio bloque acordeon -->
+                <div class="accordion" id="mi-acordeon">
+                    <!-- Inicio elemento acordeon -->
+                    <div class="accordion__item">
+                        <h3 class="accordion__heading">
+                        <button
+                            class="accordion__trigger etiqueta_cards"
+                            id="pregunta-1"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="respuesta-1">
+                            Empanadas
+                            <span class="accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        </h3>
+
+                        <div
+                        class="accordion__panel"
+                        id="respuesta-1"
+                        role="region"
+                        aria-labelledby="pregunta-1"
+                        hidden
+                        >
+                            <img class="menudigital_img_product" src="../img/productos-menudigital/empanadasmodelo1.jpeg" alt="">
+                            <p class="menudigital_precio_product">$16.000</p>
+                            <div class="menudigital_descripcion_product">
+                                <p>6 empanadas a elección:</p>
+                                <ul>
+                                    <li>Carne</li>
+                                    <li>Queso</li>
+                                    <li>Pollo</li>
+                                    <li>Árabe</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Fin elemento acordeon -->
+                        <!-- Inicio elemento acordeon -->
+                        <div class="accordion__item">
+                            <h3 class="accordion__heading">
+                            <button
+                                class="accordion__trigger etiqueta_cards"
+                                id="pregunta-2"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="respuesta-2">
+                                Mollejas al limon
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            </h3>
+
+                            <div
+                            class="accordion__panel"
+                            id="respuesta-2"
+                            role="region"
+                            aria-labelledby="pregunta-2"
+                            hidden
+                            >
+                                <img class="menudigital_img_product" src="../img/productos-menudigital/mollejasmodelo1.jpeg" alt="">
+                                    <p class="menudigital_precio_product">$12.000</p>
+                                    <div class="menudigital_descripcion_product">
+                                        <p>Un plato de mollejas con pan y salsas para acompañar:</p>
+                                        <ul class="menudigital_salsas">
+                                            <li class="menudigital_salsas_titulo">Salsas</li>
+                                            <li>Ajo</li>
+                                            <li>Apio</li>
+                                            <li>Berenjena</li>
+                                            <li>Ají</li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- Fin elemento acordeon -->
+                        <!-- Inicio elemento acordeon -->
+                        <div class="accordion__item">
+                            <h3 class="accordion__heading">
+                            <button
+                                class="accordion__trigger etiqueta_cards"
+                                id="pregunta-3"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="respuesta-3"
+                            >
+                                Lengua a la vinagreta
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            </h3>
+
+                            <div
+                            class="accordion__panel"
+                            id="respuesta-3"
+                            role="region"
+                            aria-labelledby="pregunta-3"
+                            hidden
+                            >
+                            <img class="menudigital_img_product" src="../img/productos-menudigital/lenguamodelo1.jpeg" alt="">
+                                    <p class="menudigital_precio_product">$12.000</p>
+                                    <div class="menudigital_descripcion_product">
+                                        <p>Un plato de lengua con pan y salsas para acompañar:</p>
+                                        <ul class="menudigital_salsas">
+                                            <li class="menudigital_salsas_titulo">Salsas</li>
+                                            <li>Ajo</li>
+                                            <li>Apio</li>
+                                            <li>Berenjena</li>
+                                            <li>Ají</li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <!-- Fin elemento acordeon -->
+                        </div>
+                        <!-- Fin bloque acordeon -->
+                        
+                    <h3 class="categoria_titulos">Platos fuertes</h3>
+                    
+                    <!-- Tarjeta producto catalogo v1 -->
+                    <div class="product-card">
+                        <!-- Imagen card -->
+                        <div class="product-card__image">
+                            <img
+                                src="../img/productos-menudigital/milanesamodelo1.jpeg"
+                                alt="Empanadas caseras"
+                                loading="lazy"
+                            >
+                        </div>
+                        <!-- Información card -->
+                        <div class="product-card__content">
+                            <!-- titulo card -->
+                            <h3>Milanesa napolitana</h3>
+                            <!-- info card -->
+                            <div class="product-card__accompaniments">
+                                <p class="product-card__accompaniments-title">Acompañamientos</p>
+
+                                <ul class="product-card__accompaniments-list">
+                                    <li>Papas fritas</li>
+                                    <li>Arroz</li>
+                                    <li>Ensalada</li>
+                                </ul>
+                            </div>
+                            <!-- precio card-->
+                            <span class="product-card__price">$16.000</span>
+                        </div>
+                    </div>
+                    <!-- Tarjeta producto catalogo v1 -->
+                    <div class="product-card">
+                        <!-- Imagen card -->
+                        <div class="product-card__image">
+                            <img
+                                src="../img/productos-menudigital/asadomodelo1.jpeg"
+                                alt="Empanadas caseras"
+                                loading="lazy"
+                            >
+                        </div>
+                        <!-- Información card -->
+                        <div class="product-card__content">
+                            <!-- titulo card -->
+                            <h3>Asado p/2</h3>
+                            <!-- info card -->
+                            <div class="product-card__accompaniments">
+                                <p class="product-card__accompaniments-title">Acompañamientos</p>
+
+                                <ul class="product-card__accompaniments-list">
+                                    <li>Papas fritas</li>
+                                    <li>Arroz</li>
+                                    <li>Ensalada</li>
+                                </ul>
+                            </div>
+                            <!-- precio card-->
+                            <span class="product-card__price">$16.000</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta producto catalogo v1 -->
+                    <div class="product-card">
+                        <!-- Imagen card -->
+                        <div class="product-card__image">
+                            <img
+                                src="../img/productos-menudigital/milanesasuizamodelo1.jpeg"
+                                alt="Empanadas caseras"
+                                loading="lazy"
+                            >
+                        </div>
+                        <!-- Información card -->
+                        <div class="product-card__content">
+                            <!-- titulo card -->
+                            <h3>Suprema Suiza</h3>
+                            <!-- info card -->
+                            <div class="product-card__accompaniments">
+                                <p class="product-card__accompaniments-title">Acompañamientos</p>
+
+                                <ul class="product-card__accompaniments-list">
+                                    <li>Papas fritas</li>
+                                    <li>Puré de papa</li>
+                                    <li>Papas noisette</li>
+                                </ul>
+                            </div>
+                            <!-- precio card-->
+                            <span class="product-card__price">$16.000</span>
+                        </div>
+                    </div>
+                    <h3 class="categoria_titulos">Cafeteria</h3>
+                    <div>
+                    
+                    </div>
+                    <h3 class="categoria_titulos">Bebidas</h3>
+                    <div>
+            
+                </div>
+        </section>
+    </main>
+    <footer></footer>
+<script src="../js/carruselmenudigitalhero.js"></script>
+<script src="../js/acordeones.js"></script>
+</body>
+</html>
