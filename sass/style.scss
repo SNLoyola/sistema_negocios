@@ -5,7 +5,8 @@
 
 // 2. Base: estilos generales
 @use "./base/reset";
-// @use "./base/typography";
+@use "./base/typography";
+@use "./base/colors";
 
 // 3. Layouts: estructura de la página
 @use "./layouts/header";
