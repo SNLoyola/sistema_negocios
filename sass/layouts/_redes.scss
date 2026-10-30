@@ -1,38 +1,29 @@
 @use "../base/colors" as v;
+@use "../base/typography" as c;
 
 .social-section {
-    // Centrado horizontal y vertical
     display: flex;
     justify-content: center;
-    // align-items: center;
-
-    // Ocupa como mínimo toda la pantalla visible
-    min-height: 100vh;
-    min-height: 100svh;
-
     width: 100%;
     padding: clamp(1rem, 5vw, 3rem);
-
-    // background-color: #f8f5f1;
+    background-color: v.$color-background-dark;
+    font-family: c.$font-tertiary;
 
     &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-
         width: 100%;
         max-width: 700px;
         min-width: 0;
-
         text-align: center;
     }
 
     &__title {
         margin: 0;
-        color: #29231f;
-
         font-size: clamp(1.6rem, 5vw, 2.5rem);
+        font-family: c.$font-primary;
         line-height: 1.2;
         overflow-wrap: anywhere;
     }
@@ -40,8 +31,7 @@
     &__description {
         max-width: 48ch;
         margin: 0;
-
-        // color: #6b625b;
+        color: v.$color-text-muted;
         font-size: clamp(0.95rem, 2.5vw, 1.1rem);
         line-height: 1.6;
     }
@@ -52,7 +42,6 @@
         justify-content: center;
         align-items: center;
         gap: 0.75rem;
-
         width: 100%;
         margin-top: 0.5rem;
     }
@@ -64,26 +53,19 @@
     align-items: center;
     justify-content: center;
     gap: 0.65rem;
-
-    flex: 1 1 100%;
-    min-width: 0;
-    max-width: 320px;
+    max-width: 520px;
+    width: 320px;
+    height: 60px;
     min-height: 48px;
     padding: 0.75rem 1rem;
-
-    background-color: #29231f;
-    color: #fff;
-
-    border: 1px solid transparent;
+    color: v.$color-secondary;
+    border: 1px solid v.$color-tertiary;
     border-radius: 10px;
-
     font-size: 0.95rem;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-
     overflow-wrap: anywhere;
-
     transition:
         background-color 0.2s ease,
         transform 0.2s ease,
@@ -102,7 +84,7 @@
     }
 
     &:focus-visible {
-        outline: 3px solid #b77b45;
+        // outline: 3px solid #b77b45;
         outline-offset: 3px;
     }
 
@@ -111,14 +93,57 @@
     }
 }
 
-// Pantallas medianas y grandes
-@media (min-width: 600px) {
-    .social-button {
-        flex: 0 1 auto;
-        min-width: 180px;
-        width: auto;
+.social-button:hover{
+    transition: all 0.3s ease;
+    transition-delay: 0.3s;
+    color: v.$color-primary;
+    border: 1px solid transparent;
+    .feature__icon svg{
+        stroke: v.$color-primary;
     }
 }
+
+/* Ajustes para celulares */
+@media (max-width: 480px) {
+    .social-section{
+        &__content {
+        
+    }
+
+    &__title {
+        font-size: xx-large;
+        
+    }
+
+    &__description {
+        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    }
+        .social-button{
+            height: 70px;
+            width: 340px;
+            font-size: xx-large;
+            justify-content: flex-start;
+            &__icon {
+                width: 42px;
+                height: 42px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px){
+  
+}
+
+@media (max-width: 360px){
+  
+}
+
+@media (max-width: 320px){
+
+}
+
 
 // Preferencia de movimiento reducido
 @media (prefers-reduced-motion: reduce) {

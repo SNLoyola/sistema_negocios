@@ -1,0 +1,8 @@
+@use "../base/colors" as v;
+@use "../base/typography" as c;
+
+.restaurant-card{
+    h2{
+        font-size: 35px;
+    }
+}

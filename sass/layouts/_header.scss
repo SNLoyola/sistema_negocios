@@ -18,9 +18,16 @@ header{
   align-items: center;
 }
 
+::selection {
+  background-color: v.$color-primary;
+  color: v.$color-text-light;
+}
+
 .Orelith-title{
   grid-column: 2;
   text-align: center;
+  font-size: xxx-large;
+  // color: v.$color-violete;
 }
 
 .modo-change{
@@ -35,20 +42,17 @@ main{
 /* Contenedor servicios */
 .restaurant-card {
   width: 100%;
-  max-width: 480px;
-  margin-top: 5%;
+  max-width: 560px;
   margin-inline: auto;
   padding: 24px;
-  // background-color: v.$color-background-light;
-  box-shadow: 0 0 72px #00FFFF55;
+  box-shadow: 0 0 72px v.$color-dciane;
   border-radius: 16px;
   box-sizing: border-box;
-  // font-family: Arial, sans-serif;
 }
 
 /* Título principal */
 .restaurant-card__title {
-  margin: 0 0 24px;
+  margin: 0px;
   font-size: 28px;
   line-height: 1.3;
   font-weight: 700;
@@ -116,14 +120,13 @@ main{
 
 .feature__content p {
   margin: 0;
-  font-size: 14px;
+  font-size: 22px;
   line-height: 1.5;
   color: v.$color-text-muted;
 }
 
 /* Interacción */
 .feature:hover {
-  box-shadow: 0 0 72px #00FFFF55;
   transition: all 0.3s ease;
   transition-delay: 0.3s;
     h3{
@@ -143,10 +146,92 @@ main{
   border-radius: 4px;
 }
 
+footer{
+  .copyright{
+    color: v.$color-text-muted;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+}
+
 /* Ajustes para celulares */
 @media (max-width: 480px) {
   main{
-    margin-top: 25%;
+    margin-top: 30%;
+  }
+  .restaurant-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .restaurant-card__title {
+    font-size: 26px;
+  }
+
+  .feature {
+    gap: 12px;
+    padding-block: 16px;
+  }
+
+  .feature__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature__content p{
+    font-size: 22px;
+  }
+
+  .feature__icon svg {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 420px){
+  main{
+    margin-top: 10%;
+  }
+  .restaurant-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .restaurant-card__title {
+    font-size: 26px;
+  }
+
+  .feature {
+    gap: 12px;
+    padding-block: 16px;
+  }
+
+  .feature__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature__content h3 {
+    font-size: 24px;
+  }
+
+  .feature__content p{
+    font-size: 20px;
+  }
+
+  .feature__icon svg {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 360px){
+  main{
+    margin-top: 22%;
   }
   .restaurant-card {
     padding: 20px;
@@ -163,12 +248,24 @@ main{
   }
 
   .feature__icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature__content h3 {
+    font-size: 20px;
+  }
+
+  .feature__content p{
+    font-size: 17px;
   }
 
   .feature__icon svg {
-    width: 25px;
-    height: 25px;
+    width: 48px;
+    height: 48px;
   }
+}
+
+@media (max-width: 320px){
+
 }
