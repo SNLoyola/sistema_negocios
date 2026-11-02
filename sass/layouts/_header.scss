@@ -9,6 +9,8 @@ h1,h2,h3,h4,h5,h6{
 
 body{
   background-color: v.$color-background-dark;
+  display: flex;
+  flex-direction: column;
 }
 
 header{
@@ -16,6 +18,7 @@ header{
   display: grid;
   grid-template-columns: 1f auto 1f;
   align-items: center;
+  flex: 1;
 }
 
 ::selection {
@@ -37,6 +40,7 @@ header{
 
 main{
   margin-top: 0%;
+
 }
 
 /* Contenedor servicios */
@@ -149,12 +153,9 @@ main{
 footer{
   .copyright{
     color: v.$color-text-muted;
-    position: fixed;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     width: 100%;
+    padding: 1rem;
   }
 }
 
@@ -166,10 +167,11 @@ footer{
   .restaurant-card {
     padding: 20px;
     border-radius: 12px;
+    max-width: 380px;
   }
 
   .restaurant-card__title {
-    font-size: 26px;
+    font-size: 36px;
   }
 
   .feature {
@@ -194,7 +196,7 @@ footer{
 
 @media (max-width: 420px){
   main{
-    margin-top: 10%;
+    margin-top: 0%;
   }
   .restaurant-card {
     padding: 20px;
@@ -202,7 +204,7 @@ footer{
   }
 
   .restaurant-card__title {
-    font-size: 26px;
+    font-size: 36px;
   }
 
   .feature {
@@ -231,16 +233,17 @@ footer{
 
 @media (max-width: 360px){
   main{
-    margin-top: 22%;
+    // margin-top: 22%;
   }
   .restaurant-card {
     padding: 20px;
     border-radius: 12px;
+    max-width: 320px;
+    h2 {
+      font-size: 30px;
+    }
   }
 
-  .restaurant-card__title {
-    font-size: 20px;
-  }
 
   .feature {
     gap: 12px;
@@ -267,5 +270,5 @@ footer{
 }
 
 @media (max-width: 320px){
-
+  
 }
