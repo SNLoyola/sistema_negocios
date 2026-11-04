@@ -3,231 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lato:wght@300;400&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
-    <!-- Fin fuentes -->
-    <title>Taurus Code - Menú Digital</title>
+    
+    <title>Orelith - Restaurante</title>
 </head>
 <body class="menudigital-body">
-    <main>
-        <h1>[Nombre de el Local]</h1>
-        <h2>FOOD MENU</h2>
-        <section class="catalogo_menu_digital">
-            <h3 class="categoria_titulos">Entradas</h3>
-                <!-- Inicio bloque acordeon -->
-                <div class="accordion" id="mi-acordeon">
-                    <!-- Inicio elemento acordeon -->
-                    <div class="accordion__item">
-                        <h3 class="accordion__heading">
-                        <button
-                            class="accordion__trigger etiqueta_cards"
-                            id="pregunta-1"
-                            type="button"
-                            aria-expanded="false"
-                            aria-controls="respuesta-1">
-                            Empanadas
-                            <span class="accordion__icon" aria-hidden="true"></span>
-                        </button>
-                        </h3>
+    <main class="main-restaurante">
+        <h1 class="menudigital-title">Restaurante Ejemplo</h1>
+        <!-- Searchbar -->
+        <div class="searchbar">
+            <input 
+                type="search" 
+                id="search-input" 
+                placeholder="Buscar..."
+            >
 
-                        <div
-                        class="accordion__panel"
-                        id="respuesta-1"
-                        role="region"
-                        aria-labelledby="pregunta-1"
-                        hidden
-                        >
-                            <img class="menudigital_img_product" src="../img/productos-menudigital/empanadasmodelo1.jpeg" alt="">
-                            <p class="menudigital_precio_product">$16.000</p>
-                            <div class="menudigital_descripcion_product">
-                                <p>6 empanadas a elección:</p>
-                                <ul>
-                                    <li>Carne</li>
-                                    <li>Queso</li>
-                                    <li>Pollo</li>
-                                    <li>Árabe</li>
-                                </ul>
-                            </div>
+            <button id="search-button" aria-label="Buscar">
+                <!-- Tu SVG de búsqueda -->
+            </button>
+        </div>
+        <!-- Fin searchbar -->
+        <!-- categorias de items -->
+        <section id="categorias" class="categorias">
+            <ul>
+                <li>
+                    <a href="#entradas">
+                        <div>
+                            <svg class="menudigital-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 3V7M8 7H12M8 7V9C8 10.1046 8.89543 11 10 11H12M16 7V3M16 7H12M16 7V9C16 10.1046 15.1046 11 14 11H12M12 7V3M12 11V21" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
                         </div>
+                        <div class="menudigital-cat-title">
+                            Entradas
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#platop">
+                        <div class="">
+                            <svg class="menudigital-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.7276 3L14.8991 5.82843M14.8991 5.82843L17.0204 7.94975M14.8991 5.82843C14.192 6.53553 13.2021 8.37401 14.8991 10.0711M17.0204 7.94975L19.8489 5.12132M17.0204 7.94975L19.1418 10.0711M21.9702 7.24264L19.1418 10.0711M19.1418 10.0711C18.4347 10.7782 16.5962 11.7681 14.8991 10.0711M14.8991 10.0711L5.12095 19.8492M9.72757 9.24264L4.24229 3.75736C3.48493 4.82843 3.07316 7.87351 7.48493 11.4853L9.72757 9.24264ZM9.72757 9.24264L10.4996 10.0147M19.9702 19.4853L12.7276 12.2426" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="menudigital-cat-title">
+                            Principales
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#burgersan">
+                        <div class="">
+                            <svg class="menudigital-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 11C21.1046 11 22 11.8954 22 13C22 14.1046 21.1046 15 20 15H4C2.89543 15 2 14.1046 2 13C2 11.8954 2.89543 11 4 11M20 11H4M20 11C20.5523 11 21.0079 10.5493 20.942 10.0009C20.4323 5.75576 16.6233 4 12 4C7.37672 4 3.56765 5.75576 3.05796 10.0009C2.99212 10.5493 3.44772 11 4 11M3 15H21V17C21 18.6569 19.6569 20 18 20H6C4.34315 20 3 18.6569 3 17V15Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg> 
+                        </div>
+                        <div class="menudigital-cat-title">
+                            Sandwiches
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#ensaladas">
+                        <div class="">
+                            <svg class="menudigital-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12C6.5 11.2044 6.81607 10.4413 7.37868 9.87868C7.94129 9.31607 8.70435 9 9.5 9C10.2956 9 11.0587 9.31607 11.6213 9.87868C12.1839 10.4413 12.5 11.2044 12.5 12C12.5 7.5 15 4.5 19.5 4C19.5 8.5 18 11 16 12M3 12H21C21 17 17 21 12 21C7 21 3 17 3 12Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="menudigital-cat-title">
+                            Ensaladas
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#postres">
+                        <div class="">
+                            <svg class="menudigital-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 17H9C7.89543 17 7 16.1046 7 15V7.5C7 4.46243 9.46243 2 12.5 2C15.5376 2 18 4.46243 18 7.5V15C18 16.1046 17.1046 17 16 17H14M11 17V20.5C11 21.3284 11.6716 22 12.5 22C13.3284 22 14 21.3284 14 20.5V17M11 17H14M12 5C11.3333 5 10 5.4 10 7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="menudigital-cat-title">
+                            Postres
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bebidas">
+                        <div class="">
+                            <svg class="menudigital-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 21H10C8.89543 21 8 20.1046 8 19V12C8 10.5052 8.51721 9.70868 9.06844 9.32046C9.51998 9.00245 10 8.55228 10 8V4C10 3.44772 10.4477 3 11 3H13C13.5523 3 14 3.44772 14 4V8C14 8.55228 14.48 9.00245 14.9316 9.32046C15.4828 9.70868 16 10.5052 16 12V19C16 20.1046 15.1046 21 14 21Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="menudigital-cat-title">
+                            Bebidas
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- fin categorias de items -->
+        <!-- items -->
+        <section id="entradas" class="item-cuerpo">
+                <h3>Entradas</h3>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Papas Fritas</p>
+                        <p class="item-price">$5.500</p>
+                        <p class="item-desc">Una porcion de papas fritas</p>
                     </div>
-                        <!-- Fin elemento acordeon -->
-                        <!-- Inicio elemento acordeon -->
-                        <div class="accordion__item">
-                            <h3 class="accordion__heading">
-                            <button
-                                class="accordion__trigger etiqueta_cards"
-                                id="pregunta-2"
-                                type="button"
-                                aria-expanded="false"
-                                aria-controls="respuesta-2">
-                                Mollejas al limon
-                                <span class="accordion__icon" aria-hidden="true"></span>
-                            </button>
-                            </h3>
-
-                            <div
-                            class="accordion__panel"
-                            id="respuesta-2"
-                            role="region"
-                            aria-labelledby="pregunta-2"
-                            hidden
-                            >
-                                <img class="menudigital_img_product" src="../img/productos-menudigital/mollejasmodelo1.jpeg" alt="">
-                                    <p class="menudigital_precio_product">$12.000</p>
-                                    <div class="menudigital_descripcion_product">
-                                        <p>Un plato de mollejas con pan y salsas para acompañar:</p>
-                                        <ul class="menudigital_salsas">
-                                            <li class="menudigital_salsas_titulo">Salsas</li>
-                                            <li>Ajo</li>
-                                            <li>Apio</li>
-                                            <li>Berenjena</li>
-                                            <li>Ají</li>
-                                        </ul>
-                                    </div>
-                            </div>
-                        </div>
-                        <!-- Fin elemento acordeon -->
-                        <!-- Inicio elemento acordeon -->
-                        <div class="accordion__item">
-                            <h3 class="accordion__heading">
-                            <button
-                                class="accordion__trigger etiqueta_cards"
-                                id="pregunta-3"
-                                type="button"
-                                aria-expanded="false"
-                                aria-controls="respuesta-3"
-                            >
-                                Lengua a la vinagreta
-                                <span class="accordion__icon" aria-hidden="true"></span>
-                            </button>
-                            </h3>
-
-                            <div
-                            class="accordion__panel"
-                            id="respuesta-3"
-                            role="region"
-                            aria-labelledby="pregunta-3"
-                            hidden
-                            >
-                            <img class="menudigital_img_product" src="../img/productos-menudigital/lenguamodelo1.jpeg" alt="">
-                                    <p class="menudigital_precio_product">$12.000</p>
-                                    <div class="menudigital_descripcion_product">
-                                        <p>Un plato de lengua con pan y salsas para acompañar:</p>
-                                        <ul class="menudigital_salsas">
-                                            <li class="menudigital_salsas_titulo">Salsas</li>
-                                            <li>Ajo</li>
-                                            <li>Apio</li>
-                                            <li>Berenjena</li>
-                                            <li>Ají</li>
-                                        </ul>
-                                    </div>
-                            </div>
-                            <!-- Fin elemento acordeon -->
-                        </div>
-                        <!-- Fin bloque acordeon -->
-                        
-                    <h3 class="categoria_titulos">Platos fuertes</h3>
-                    
-                    <!-- Tarjeta producto catalogo v1 -->
-                    <div class="product-card">
-                        <!-- Imagen card -->
-                        <div class="product-card__image">
-                            <img
-                                src="../img/productos-menudigital/milanesamodelo1.jpeg"
-                                alt="Empanadas caseras"
-                                loading="lazy"
-                            >
-                        </div>
-                        <!-- Información card -->
-                        <div class="product-card__content">
-                            <!-- titulo card -->
-                            <h3>Milanesa napolitana</h3>
-                            <!-- info card -->
-                            <div class="product-card__accompaniments">
-                                <p class="product-card__accompaniments-title">Acompañamientos</p>
-
-                                <ul class="product-card__accompaniments-list">
-                                    <li>Papas fritas</li>
-                                    <li>Arroz</li>
-                                    <li>Ensalada</li>
-                                </ul>
-                            </div>
-                            <!-- precio card-->
-                            <span class="product-card__price">$16.000</span>
-                        </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Papas Fritas">
                     </div>
-                    <!-- Tarjeta producto catalogo v1 -->
-                    <div class="product-card">
-                        <!-- Imagen card -->
-                        <div class="product-card__image">
-                            <img
-                                src="../img/productos-menudigital/asadomodelo1.jpeg"
-                                alt="Empanadas caseras"
-                                loading="lazy"
-                            >
-                        </div>
-                        <!-- Información card -->
-                        <div class="product-card__content">
-                            <!-- titulo card -->
-                            <h3>Asado p/2</h3>
-                            <!-- info card -->
-                            <div class="product-card__accompaniments">
-                                <p class="product-card__accompaniments-title">Acompañamientos</p>
-
-                                <ul class="product-card__accompaniments-list">
-                                    <li>Papas fritas</li>
-                                    <li>Arroz</li>
-                                    <li>Ensalada</li>
-                                </ul>
-                            </div>
-                            <!-- precio card-->
-                            <span class="product-card__price">$16.000</span>
-                        </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Palitos de Queso</p>
+                        <p class="item-price">$7.000</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                    
-                    <!-- Tarjeta producto catalogo v1 -->
-                    <div class="product-card">
-                        <!-- Imagen card -->
-                        <div class="product-card__image">
-                            <img
-                                src="../img/productos-menudigital/milanesasuizamodelo1.jpeg"
-                                alt="Empanadas caseras"
-                                loading="lazy"
-                            >
-                        </div>
-                        <!-- Información card -->
-                        <div class="product-card__content">
-                            <!-- titulo card -->
-                            <h3>Suprema Suiza</h3>
-                            <!-- info card -->
-                            <div class="product-card__accompaniments">
-                                <p class="product-card__accompaniments-title">Acompañamientos</p>
-
-                                <ul class="product-card__accompaniments-list">
-                                    <li>Papas fritas</li>
-                                    <li>Puré de papa</li>
-                                    <li>Papas noisette</li>
-                                </ul>
-                            </div>
-                            <!-- precio card-->
-                            <span class="product-card__price">$16.000</span>
-                        </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Mozzarela Sticks">
                     </div>
-                    <h3 class="categoria_titulos">Cafeteria</h3>
-                    <div>
-                    
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Nuggets de Pollo</p>
+                        <p class="item-price">$8.000</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                    <h3 class="categoria_titulos">Bebidas</h3>
-                    <div>
-            
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Chiken Nuggets">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Aros de Cebolla</p>
+                        <p class="item-price">$6.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Onion Rings">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Empanadas</p>
+                        <p class="item-price">$5.000</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Empanadas">
+                    </div>
+                </div>
+        </section>
+        <section id="platop" class="item-cuerpo">
+                <h3>Plato Principal</h3>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Pollo frito</p>
+                        <p class="item-price">$12.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Fried Chiken">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Milanesa de Carne</p>
+                        <p class="item-price">$14.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Milanesa">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Fideos con Salsa</p>
+                        <p class="item-price">$13.000</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Spaghetti">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Pescado</p>
+                        <p class="item-price">$19.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Fish">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Bife de Carne</p>
+                        <p class="item-price">$18.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Beef">
+                    </div>
+                </div>
+        </section>
+        <section id="burgersan" class="item-cuerpo">
+                <h3>Hamburguesas y Sandwiches</h3>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Hamburguesa c/ queso</p>
+                        <p class="item-price">$12.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Cheeseburger">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Bacon</p>
+                        <p class="item-price">$16.000</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Bacon burger">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Doble queso</p>
+                        <p class="item-price">$16.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Cheeseburger Double">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Doble Beacon</p>
+                        <p class="item-price">$18.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Bacon Double">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Triple</p>
+                        <p class="item-price">$22.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Cheeseburger Triple">
+                    </div>
+                </div>
+        </section>
+        <section id="ensaladas" class="item-cuerpo">
+                <h3>Ensaladas</h3>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Ensalada Caesar</p>
+                        <p class="item-price">$10.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Caesar Salad">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Ensalada Mixta</p>
+                        <p class="item-price">$7.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Mixed Salad">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Ensalada Rusa</p>
+                        <p class="item-price">$8.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Russian Salad">
+                    </div>
+                </div>
+        </section>
+        <section id="postres" class="item-cuerpo">
+                <h3>Postres</h3>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Brownie</p>
+                        <p class="item-price">$6.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Brwonie">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Cheesecake</p>
+                        <p class="item-price">$7.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Cheesecake">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Flan</p>
+                        <p class="item-price">$5.000</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Flan">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Helado</p>
+                        <p class="item-price">$6.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Helado">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Volcan de chocolate</p>
+                        <p class="item-price">$12.500</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Volcan de chocolate">
+                    </div>
+                </div>
+        </section>
+        <section id="bebidas" class="item-cuerpo">
+                <h3>Bebidas</h3>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Coca-Cola (500 ml)</p>
+                        <p class="item-price">$5.500</p>
+                        <p class="item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Coca-Cola 500">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Jugo de Naranja</p>
+                        <p class="item-price">$6.500</p>
+                        <p class="item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Orange Juice">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Agua (500 ml)</p>
+                        <p class="item-price">$2.500</p>
+                        <p class="item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Agua 500">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Coca-Cola (1.5 ml)</p>
+                        <p class="item-price">$8.500</p>
+                        <p class="item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Coca-Cola 1.5">
+                    </div>
+                </div>
+                <div class="item-item">
+                    <div class="item-data">
+                        <p class="item-name">Limonada (1L)</p>
+                        <p class="item-price">$5.500</p>
+                        <p class="item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="item-img">
+                        <img src="../img/productos-menudigital/imagenilustrativa.png" alt="Lemonade 1L">
+                    </div>
                 </div>
         </section>
     </main>
     <footer></footer>
-<!-- <script src="../js/carruselmenudigitalhero.js"></script> -->
-<script src="../js/acordeones.js"></script>
+<script src="../js/buscador-restaurante.js"></script>
 </body>
 </html>
