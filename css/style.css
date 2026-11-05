@@ -682,6 +682,18 @@ footer .copyright {
     transition: none;
   }
 }
+.estetica-body {
+  background-color: #C04DFF;
+}
+
+.indumentaria-body {
+  background-color: #028290;
+}
+
+.tmascotas-body {
+  background-color: #788568;
+}
+
 .searchbar {
   display: flex;
   align-items: center;

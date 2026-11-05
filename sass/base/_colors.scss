@@ -1,26 +1,52 @@
 // Colores principales
 $color-primary: #02E1FF;
-$color-secondary: #028290;
 $color-tertiary: #02E3EB;
+$color-secondary: #028290;
 
 // Colores de fondo
 $color-background: #F2F2F2;
-$color-background-dark: #050505;
 $color-background-light: #797979;
+$color-background-dark: #050505;
+$color-voidBlack-background: #02090D;
+$color-CyberBlack-background: #06141B;
+$color-DeepOcean-background: #091E27;
 
 // Colores de texto
-$color-text: #222222;
 $color-text-light: #ffffff;
 $color-text-muted: #c8c8c8;
-
-// Otros
-$color-violete: #8F00FF;
-$color-lilan: #E040FF;
-$color-dviolete: #BF00FF;
 $color-dciane: #00FFFF55;
+$color-text: #222222;
+
+// Variantes tonos principales
+$color-variety-DarkCyan: #003B45;
+$color-variety-DeepCyan: #005967;
+$color-variety-TealCyan: #028290;
+$color-variety-MediumCyan: #00A9BC;
+$color-variety-ElectricCyan: #02E1FF;
+$color-variety-LightCyan: #65EDFF;
+$color-variety-IceCyan:	#B4F7FF;
+// Tonos Oscuros
+$color-DarkTeal: #0B2932;
+$color-IndustrialBlue: #102F38;
+$color-NeonShadow: #153B43;
+
+// Colores secundarios y acentos principales
+$color-acnto-DigitalPurple: #8B5CF6;
+$color-acnto-CyberViolet: #C04DFF;
+$color-acnto-NeonPink: #FF3CAC;
+$color-acnto-AcidGreen: #A2FF00;
+$color-acnto-DigitalGold:#E5B94B;
+$color-acnto-AlertRed:#FF5C5C;
+
+// Fondos y superficies
+$color-neutro-PureBlack: #050505;
+$color-neutro-DarkSurface: #111820;
+$color-neutro-PanelGray: #1B252C;
+$color-neutro-SteelGray: #343D43;
+$color-neutro-NeutralGray: #797979;
+$color-neutro-Silver: #C8C8C8;
 
 // Colores menú digital restaurantes
-
 $color-menu-white: #FFFFFF;
 $color-menu-black: #252525;
 $color-menu-terra: #B96545;
