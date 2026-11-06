@@ -682,8 +682,152 @@ footer .copyright {
     transition: none;
   }
 }
-.estetica-body {
-  background-color: #C04DFF;
+.estetica-body .header-estetica {
+  margin: 0;
+  background-color: #FFF9FA;
+}
+.estetica-body .header-estetica .estetica-isotipo {
+  display: flex;
+}
+.estetica-body .header-estetica .estetica-isotipo h1 {
+  color: #171216;
+  font-size: 28px;
+}
+.estetica-body .header-estetica .estetica-nav {
+  margin: 20px 10px;
+}
+.estetica-body .header-estetica .estetica-nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.estetica-body .header-estetica .estetica-nav ul li {
+  display: flex;
+  margin-right: 12px;
+  font-size: 22px;
+}
+.estetica-body .header-estetica .estetica-nav ul li a {
+  color: #171216;
+  text-decoration: none;
+}
+.estetica-body .main-estetica {
+  background-color: #F2F2F2;
+}
+.estetica-body .main-estetica .h2-estetica {
+  color: #171216;
+  padding: 35px;
+}
+.estetica-body .main-estetica .hero-estetica .hero-estetica-img {
+  width: 100%;
+  height: 100vh;
+}
+.estetica-body .main-estetica .hero-estetica .hero-estetica-conect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 220px;
+  justify-content: space-around;
+}
+.estetica-body .main-estetica .hero-estetica .hero-estetica-conect .hero-estetica-conect-title {
+  font-size: 35px;
+  color: #49313D;
+  margin: 15px 0px;
+}
+.estetica-body .main-estetica .hero-estetica .hero-estetica-conect .hero-estetica-conect-gancho {
+  font-size: 24px;
+  color: #E89AB5;
+  margin-bottom: 5px;
+}
+.estetica-body .main-estetica .hero-estetica .hero-estetica-conect .hero-estetica-conect-boton {
+  width: 50%;
+  height: 40px;
+  background-color: #E89AB5;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  margin: 15px 0px;
+}
+.estetica-body .main-estetica .hero-estetica .hero-estetica-conect .hero-estetica-conect-boton a {
+  text-decoration: none;
+  color: #49313D;
+}
+.estetica-body .main-estetica .servicios-estetica {
+  background-color: #171216;
+  color: #F2F2F2;
+  height: 945px;
+}
+.estetica-body .main-estetica .servicios-estetica .h2servicios {
+  color: #F2F2F2;
+}
+.estetica-body .main-estetica .servicios-estetica .servicios-estetica-bloque {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 35px;
+  width: 100%;
+  max-width: 935px;
+  margin: 0 auto;
+  justify-items: center;
+}
+.estetica-body .main-estetica .servicios-estetica .servicios-estetica-bloque .servicios-estetica-bloque-item {
+  width: 350px;
+  height: 350px;
+  border-radius: 15%;
+}
+.estetica-body .main-estetica .servicios-estetica .servicios-estetica-bloque .servicios-estetica-bloque-item .servicios-estetica-bloque-item-img {
+  width: 100%;
+  height: 270px;
+  border-radius: 15%;
+}
+.estetica-body .main-estetica .servicios-estetica .servicios-estetica-bloque .servicios-estetica-bloque-item .servicios-estetica-bloque-item-texto {
+  padding: 15px;
+}
+.estetica-body .main-estetica .servicios-estetica .servicios-estetica-bloque .servicios-estetica-bloque-item .servicios-estetica-bloque-item-texto .servicios-estetica-bloque-item-texto-title {
+  font-size: 26px;
+}
+.estetica-body .main-estetica .servicios-estetica .servicios-estetica-bloque .servicios-estetica-bloque-item .servicios-estetica-bloque-item-texto .servicios-estetica-bloque-item-texto-info {
+  font-size: 16px;
+  color: #B9AEB4;
+}
+.estetica-body .main-estetica .sobrenosotros-estetica {
+  display: flex;
+  width: 100%;
+  background-color: #F8D7E3;
+  flex-direction: column;
+  align-items: center;
+}
+.estetica-body .main-estetica .sobrenosotros-estetica .sobrenosotros-estetica-imagen {
+  display: flex;
+}
+.estetica-body .main-estetica .sobrenosotros-estetica .sobrenosotros-estetica-imagen .sobrenosotros-estetica-imagen-img {
+  width: 450px;
+}
+.estetica-body .main-estetica .sobrenosotros-estetica .sobrenosotros-estetica-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.estetica-body .main-estetica .sobrenosotros-estetica .sobrenosotros-estetica-info .sobrenosotros-estetica-info-title {
+  padding: 20px;
+  color: #49313D;
+}
+.estetica-body .main-estetica .sobrenosotros-estetica .sobrenosotros-estetica-info .sobrenosotros-estetica-info-book {
+  display: flex;
+}
+.estetica-body .main-estetica .sobrenosotros-estetica .sobrenosotros-estetica-info .sobrenosotros-estetica-info-book .sobrenosotros-estetica-info-text {
+  width: 450px;
+  font-size: 20px;
+  padding: 0px 20px;
+  color: #171216;
+}
+.estetica-body .main-estetica .sobrenosotros-estetica .sobrenosotros-estetica-info .sobrenosotros-estetica-info-book .sobrenosotros-estetica-info-text .sobrenosotros-estetica-info-text-title {
+  color: #171216;
+  margin-bottom: 5px;
+}
+.estetica-body .footer-estetica {
+  background-color: #E89AB5;
 }
 
 .indumentaria-body {

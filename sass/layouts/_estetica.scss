@@ -2,5 +2,166 @@
 @use "../base/typography" as c;
 
 .estetica-body{
-    background-color: v.$color-acnto-CyberViolet;
+    .header-estetica{
+        margin: 0;
+        background-color: v.$color-estetica-pearlW;
+        .estetica-isotipo{
+            display: flex;
+            h1{
+                color: v.$color-estetica-SoftB;
+                font-size: 28px;
+            }
+
+        }
+        .estetica-nav{
+            margin: 20px 10px;
+            ul{
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                
+                li{
+                    display: flex;
+                    margin-right: 12px;
+                    font-size: 22px;
+                    a{
+                        color: v.$color-estetica-SoftB;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .main-estetica{
+        background-color: v.$color-background;
+        .h2-estetica{
+            color: v.$color-estetica-SoftB;
+            padding: 35px;
+        }
+        .hero-estetica{
+            .hero-estetica-img{
+                width: 100%;
+                height: 100vh;
+            }
+            .hero-estetica-conect{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                height: 220px;
+                justify-content: space-around;
+                .hero-estetica-conect-title{
+                    font-size: 35px;
+                    color: v.$color-estetica-DarkR;
+                    margin: 15px 0px;
+                }
+                .hero-estetica-conect-gancho{
+                    font-size: 24px;
+                    color: v.$color-estetica-primary;
+                    margin-bottom: 5px;
+                }
+                .hero-estetica-conect-boton{
+                        width: 50%;
+                        height: 40px;
+                        background-color: v.$color-estetica-primary;
+                        font-size: 20px;
+                        border: none;
+                        border-radius: 25px;
+                        margin: 15px 0px;
+                    a{
+                        text-decoration: none;
+                        color: v.$color-estetica-DarkR;
+                    }
+                }
+            }
+        }
+
+        .servicios-estetica{
+            background-color: v.$color-estetica-SoftB;
+            color: v.$color-background;
+            height: 945px;
+            .h2servicios{
+                color: v.$color-background;
+            }
+            .servicios-estetica-bloque{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, auto);
+                gap: 35px;
+
+                width: 100%;
+                max-width: 935px;
+                margin: 0 auto;
+                justify-items: center;
+                .servicios-estetica-bloque-item{
+                    
+                    width: 350px;
+                    height: 350px;
+                    border-radius: 15%;
+                    .servicios-estetica-bloque-item-img{
+                        width: 100%;
+                        height: 270px;
+                        border-radius: 15%;
+                    }
+                    .servicios-estetica-bloque-item-texto{
+                        padding: 15px;
+                        .servicios-estetica-bloque-item-texto-title{
+                            font-size: 26px;
+                        }
+                        .servicios-estetica-bloque-item-texto-info{
+                            font-size: 16px;
+                            color: v.$color-estetica-RoseG;
+                        }
+                    }
+                }
+            }
+        
+        }
+
+        .sobrenosotros-estetica{
+            display: flex;
+            width: 100%;
+            background-color: v.$color-estetica-cottonP;
+            flex-direction: column;
+            align-items: center;
+            .sobrenosotros-estetica-imagen{
+                display: flex;
+                .sobrenosotros-estetica-imagen-img{
+                    width: 450px;
+                    
+                }
+            
+            }
+            .sobrenosotros-estetica-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 30px;
+                .sobrenosotros-estetica-info-title{
+                    padding: 20px;
+                    color: v.$color-estetica-DarkR;
+                }
+                .sobrenosotros-estetica-info-book{
+                    display: flex;
+                    .sobrenosotros-estetica-info-text{
+                        width: 450px;
+                        font-size: 20px;
+                        padding: 0px 20px;
+                        color: v.$color-estetica-SoftB;
+                        .sobrenosotros-estetica-info-text-title{
+                            color: v.$color-estetica-SoftB;
+                            margin-bottom: 5px;
+                        }
+                    }
+                
+                }
+            }
+        }
+    }
+    .footer-estetica{
+        background-color: v.$color-estetica-primary;
+        
+    }
 }
