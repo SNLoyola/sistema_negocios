@@ -1,4 +1,5 @@
 // Recordá que si un archivo .sass no tiene información adentro (codigo) ocaciona un problema de conexiones y rompe todo la verga esta, por ende, comentamos los enlaces que no están "habilitados"
+
 // 1. Abstracts: variables, mixins y funciones
 // @use "./abstracts/variables";
 // @use "./abstracts/mixins";
@@ -9,13 +10,9 @@
 @use "./base/colors";
 
 // 3. Layouts: estructura de la página
-@use "./layouts/header";
+@use "./layouts/main";
 @use "./layouts/restaurante";
 @use "./layouts/redes";
-@use "./layouts/estetica";
-@use "./layouts/indumentaria";
-@use "./layouts/tmascotas";
-@use "./layouts/website-models";
 // @use "./layouts/grid";
 // @use "./layouts/footer";
 
